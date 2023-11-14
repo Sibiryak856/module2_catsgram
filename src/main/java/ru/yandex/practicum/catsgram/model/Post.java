@@ -4,12 +4,22 @@ import java.time.Instant;
 
 public class Post {
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    private Integer id;
     private final String author; // автор
     private final Instant creationDate = Instant.now(); // дата создания
     private String description; // описание
     private String photoUrl; // url-адрес фотографии
 
-    public Post(String author, String description, String photoUrl) {
+    public Post(Integer id, String author, String description, String photoUrl) {
+        this.id = id;
         this.author = author;
         this.description = description;
         this.photoUrl = photoUrl;

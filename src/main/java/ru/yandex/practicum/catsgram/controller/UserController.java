@@ -22,6 +22,11 @@ public class UserController {
         return userService.findAll();
     }
 
+    @GetMapping(value = "/{email}")
+    public User getUser(@PathVariable String email) {
+        return userService.getUser(email);
+    }
+
     @PostMapping
     public User createUser(@RequestBody User user) {
         return userService.createUser(user);
