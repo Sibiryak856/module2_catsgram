@@ -3,7 +3,7 @@ package ru.yandex.practicum.catsgram.exceptions;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-public class InvalidEmailException extends Exception {
+public class InvalidEmailException extends RuntimeException {
     public InvalidEmailException() {
     }
 
