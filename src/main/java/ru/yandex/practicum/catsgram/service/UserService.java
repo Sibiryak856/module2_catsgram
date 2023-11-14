@@ -45,13 +45,4 @@ public class UserService {
         }
         return users.get(email);
     }
-
-
-    public User getUser(String email) {
-        if (users.containsKey(email)) {
-            return users.get(email);
-        } else {
-            throw new UserNotFoundException("Пользователь не найден");
-        }
-    }
 }

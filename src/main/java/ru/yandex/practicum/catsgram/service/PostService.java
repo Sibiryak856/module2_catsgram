@@ -40,11 +40,10 @@ public class PostService {
         return post;
     }
 
-    public Post getPost(Integer id) {
-        if (posts.containsKey(id)) {
-            return posts.get(id);
-        } else {
-            throw new PostNotFoundException("Пост не найден");
+    public Post findPostById(Integer id) {
+        if (!posts.containsKey(id)) {
+            return null;
         }
+        return posts.get(id);
     }
 }
